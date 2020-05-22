@@ -148,4 +148,32 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return songs;
     }
+
+    public ArrayList<Song> getAllSongsByYear(String keyword) {
+        ArrayList<Song> songs = new ArrayList<Song>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns= {COLUMN_ID, COLUMN_SONG_TITLE, COLUMN_YEAR, COLUMN_SINGER, COLUMN_STARS};
+        String condition = COLUMN_YEAR + " Like ?";
+        String[] args = { "%" +  keyword + "%"};
+        Cursor cursor = db.query(TABLE_SONG, columns, condition, args,
+                null, null, null, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                int id = cursor.getInt(0);
+                String title = cursor.getString(1);
+                String singer = cursor.getString(2);
+                String year = cursor.getString(3);
+                int stars = cursor.getInt(4);
+
+                Song song = new Song(title, singer, year, stars);
+                song.set_id(id);
+                songs.add(song);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return songs;
+    }
 }
