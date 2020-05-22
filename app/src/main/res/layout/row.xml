@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="53dp"
+            android:layout_height="56dp"
+            app:srcCompat="@drawable/ic_library_music" />
+
+        <LinearLayout
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1998"
+                android:textColor="@android:color/holo_red_light" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our Singapore" />
+
+            <TextView
+                android:id="@+id/tvSinger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="JJ Lin / Dick lee" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView1star"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/btn_star_big_off" />
+
+            <ImageView
+                android:id="@+id/imageView2star"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/btn_star_big_off" />
+
+            <ImageView
+                android:id="@+id/imageView3star"
+                android:layout_width="21dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/btn_star_big_off" />
+
+            <ImageView
+                android:id="@+id/imageView4star"
+                android:layout_width="21dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/btn_star_big_off" />
+
+            <ImageView
+                android:id="@+id/imageView5star"
+                android:layout_width="21dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/btn_star_big_off" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
